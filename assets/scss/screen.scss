@@ -1,0 +1,120 @@
+/* 
+    Document   : screen
+    Created on : 03-Jul-2012, 23:00:59
+    Author     : Al
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*Resets*/
+h1, h2, h3, h4, h5 {
+    margin:0;
+    padding:0;
+}
+
+body {
+    margin:0;
+    padding:0;
+}
+
+/*Global Variables*/
+$base_height:200px;
+$base_width:200px;
+$base_gutter:6px;
+$box_border_offset:2px;
+
+/*Mixins*/
+
+@mixin two_step_gradient($direction, $start_color, $end_color, $start_point, $end_point) {
+    background-image: linear-gradient($direction , $start_color $start_point, $end_color $end_point);
+    background-image: -o-linear-gradient($direction , $start_color $start_point, $end_color $end_point);
+    background-image: -moz-linear-gradient($direction , $start_color $start_point, $end_color $end_point);
+    background-image: -webkit-linear-gradient($direction , $start_color $start_point, $end_color $end_point);
+    background-image: -ms-linear-gradient($direction , $start_color $start_point, $end_color $end_point);
+}
+
+@mixin box_shadow($distance, $offset, $blur, $color) {
+    -webkit-box-shadow: $distance $offset $blur $color;
+    -moz-box-shadow:    $distance $offset $blur $color;
+    box-shadow:         $distance $offset $blur $color;
+}
+
+html { 
+    
+    &.blue {@include two_step_gradient(bottom, #234F9B, #3969BD, 0%, 100%);}
+    &.red {@include two_step_gradient(bottom, #234F9B, #3969BD, 0%, 100%);}
+    &.green {@include two_step_gradient(bottom, #234F9B, #3969BD, 0%, 100%);}
+    
+    font-size:100%;
+    color:white;
+    font-family:"Trebuchet MS", helvetica, arial, sans-serif;
+    height:100%;
+}
+
+.wrapper {
+    width: ($base_width*6)+($base_gutter*6);
+    position: relative;
+    margin:auto;
+}
+
+header {
+    margin:$base_gutter/2;
+    h1 {
+        width:100%;
+        font-size:6em;
+        text-align: left;
+        margin:30px 0;
+    }
+}
+
+.content {
+    
+    div {
+        width: $base_width - $box_border_offset;
+        height:$base_height - $box_border_offset;
+        margin:$base_gutter/2;
+        float:left;
+        @include box_shadow(1px, 1px, 1px, rgba(50, 50, 50, 0.2));
+        
+        font-size:1em;
+        
+        h2, p {
+            padding:1em;
+        }
+    }
+    
+    .green {
+        border:1px solid #41CF32;
+        @include two_step_gradient(left, #4EC227, #41CF32, 0%, 100%);
+    }
+    .red {
+        border:1px solid #CF3434;
+        @include two_step_gradient(left, #A81E1E, #CF3434, 0%, 100%);
+    }
+    .blue {
+        border:1px solid #3271CF;
+        @include two_step_gradient(left, #1E4CA8, #3271CF, 0%, 100%);
+    }
+    .orange {
+        border:1px solid #FF9932;
+        @include two_step_gradient(left, #ff7b0d, #FF9932, 0%, 100%);
+    }
+    
+
+    .double-height {
+        height:($base_height*2)+$base_gutter - $box_border_offset;
+    }
+    .triple-height {
+        height:($base_height*3)+($base_gutter*2) - $box_border_offset ;
+    }
+
+    .double-width {
+        width:($base_width*2)+$base_gutter - $box_border_offset ;
+    }
+    .triple-width {
+        width:($base_width*3)+($base_gutter*2) - $box_border_offset ;
+    }
+}
+
+
+

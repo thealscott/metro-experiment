@@ -1,0 +1,102 @@
+/* 
+    Document   : screen
+    Created on : 03-Jul-2012, 23:00:59
+    Author     : Al
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/*Resets*/
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+/*Global Variables*/
+/*Mixins*/
+html {
+  font-size: 100%;
+  color: white;
+  font-family: "Trebuchet MS", helvetica, arial, sans-serif;
+  height: 100%; }
+  html.blue {
+    background-image: linear-gradient(bottom, #234f9b 0%, #3969bd 100%);
+    background-image: -o-linear-gradient(bottom, #234f9b 0%, #3969bd 100%);
+    background-image: -moz-linear-gradient(bottom, #234f9b 0%, #3969bd 100%);
+    background-image: -webkit-linear-gradient(bottom, #234f9b 0%, #3969bd 100%);
+    background-image: -ms-linear-gradient(bottom, #234f9b 0%, #3969bd 100%); }
+  html.red {
+    background-image: linear-gradient(bottom, #234f9b 0%, #3969bd 100%);
+    background-image: -o-linear-gradient(bottom, #234f9b 0%, #3969bd 100%);
+    background-image: -moz-linear-gradient(bottom, #234f9b 0%, #3969bd 100%);
+    background-image: -webkit-linear-gradient(bottom, #234f9b 0%, #3969bd 100%);
+    background-image: -ms-linear-gradient(bottom, #234f9b 0%, #3969bd 100%); }
+  html.green {
+    background-image: linear-gradient(bottom, #234f9b 0%, #3969bd 100%);
+    background-image: -o-linear-gradient(bottom, #234f9b 0%, #3969bd 100%);
+    background-image: -moz-linear-gradient(bottom, #234f9b 0%, #3969bd 100%);
+    background-image: -webkit-linear-gradient(bottom, #234f9b 0%, #3969bd 100%);
+    background-image: -ms-linear-gradient(bottom, #234f9b 0%, #3969bd 100%); }
+
+.wrapper {
+  width: 1236px;
+  position: relative;
+  margin: auto; }
+
+header {
+  margin: 3px; }
+  header h1 {
+    width: 100%;
+    font-size: 6em;
+    text-align: left;
+    margin: 30px 0; }
+
+.content div {
+  width: 198px;
+  height: 198px;
+  margin: 3px;
+  float: left;
+  -webkit-box-shadow: 1px 1px 1px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 1px 1px 1px rgba(50, 50, 50, 0.2);
+  box-shadow: 1px 1px 1px rgba(50, 50, 50, 0.2);
+  font-size: 1em; }
+  .content div h2, .content div p {
+    padding: 1em; }
+.content .green {
+  border: 1px solid #41CF32;
+  background-image: linear-gradient(left, #4ec227 0%, #41cf32 100%);
+  background-image: -o-linear-gradient(left, #4ec227 0%, #41cf32 100%);
+  background-image: -moz-linear-gradient(left, #4ec227 0%, #41cf32 100%);
+  background-image: -webkit-linear-gradient(left, #4ec227 0%, #41cf32 100%);
+  background-image: -ms-linear-gradient(left, #4ec227 0%, #41cf32 100%); }
+.content .red {
+  border: 1px solid #CF3434;
+  background-image: linear-gradient(left, #a81e1e 0%, #cf3434 100%);
+  background-image: -o-linear-gradient(left, #a81e1e 0%, #cf3434 100%);
+  background-image: -moz-linear-gradient(left, #a81e1e 0%, #cf3434 100%);
+  background-image: -webkit-linear-gradient(left, #a81e1e 0%, #cf3434 100%);
+  background-image: -ms-linear-gradient(left, #a81e1e 0%, #cf3434 100%); }
+.content .blue {
+  border: 1px solid #3271CF;
+  background-image: linear-gradient(left, #1e4ca8 0%, #3271cf 100%);
+  background-image: -o-linear-gradient(left, #1e4ca8 0%, #3271cf 100%);
+  background-image: -moz-linear-gradient(left, #1e4ca8 0%, #3271cf 100%);
+  background-image: -webkit-linear-gradient(left, #1e4ca8 0%, #3271cf 100%);
+  background-image: -ms-linear-gradient(left, #1e4ca8 0%, #3271cf 100%); }
+.content .orange {
+  border: 1px solid #FF9932;
+  background-image: linear-gradient(left, #ff7b0d 0%, #ff9932 100%);
+  background-image: -o-linear-gradient(left, #ff7b0d 0%, #ff9932 100%);
+  background-image: -moz-linear-gradient(left, #ff7b0d 0%, #ff9932 100%);
+  background-image: -webkit-linear-gradient(left, #ff7b0d 0%, #ff9932 100%);
+  background-image: -ms-linear-gradient(left, #ff7b0d 0%, #ff9932 100%); }
+.content .double-height {
+  height: 404px; }
+.content .triple-height {
+  height: 610px; }
+.content .double-width {
+  width: 404px; }
+.content .triple-width {
+  width: 610px; }
